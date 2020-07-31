@@ -7,7 +7,7 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim con As New SqlConnection(My.Settings.conexao)
-        Dim consultaSql As String = "SELECT * FRO MCLIENTES"
+        Dim consultaSql As String = "select * from clientes"
         Dim comando As New SqlCommand(consultaSql, con)
 
         Try
@@ -19,4 +19,6 @@ Public Class Form1
             MsgBox(ex.Message)
         End Try
     End Sub
+
+
 End Class
